@@ -1,0 +1,10 @@
+.num {
+  position: absolute;
+  color: red;
+  margin-left:5px;
+}
+
+a {
+	border: none !important;
+    outline: none !important
+}

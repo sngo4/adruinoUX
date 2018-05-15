@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript" src="resources/js/jquery-3.3.1.min.js"></script>
+<script src="resources/js/angular.min.js"></script>
+<script src="resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="resources/js/home/home.controller.js"></script>
+<script type="text/javascript" src="resources/js/home/home.service.js"></script>
+<link rel="stylesheet" href="resources/js/home/home.css">
+<link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">
+<link
+	href="resources/fontawesome-free-5.0.10/web-fonts-with-css/css/fontawesome-all.css"
+	rel="stylesheet">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body ng-app="myApp">
+	<div id="page-content" ng-controller="sensorsInfoView">
+		<nav class="navbar navbar-light bg-light justify-content-between">
+			<div>
+				<h3>Xin ch&#224;o Nguy&#7877;n &#272;&#7913;c T&#224;i</h3>
+			</div>
+			<div style="margin-left: auto" class="col-sm-auto">
+				<div class="col text-center">
+					<a href=""><i class="far fa-comment fa-2x"></i><span class="num"><h5>1</h5></span></a>
+				</div>
+				<div class="col text-center">
+					<span class="d-none d-md-inline">Th&#244;ng b&#225;o</span>
+				</div>
+			</div>
+			<div class="col-sm-auto">
+				<div class="col text-center">
+					<a href="" data-toggle="modal" data-target="#myModal"><i
+						class="fas fa-cogs fa-2x"></i></a>
+				</div>
+				<div class="col text-center">
+					<span class="d-none d-md-inline">T&#249;y ch&#7881;nh</span>
+				</div>
+			</div>
+		</nav>
+		<div class="table-responsive-sm">
+			<table class="table">
+				<thead>
+					<tr>
+						<th style="width: 400px;">&#272;&#7883;a ch&#7881;</th>
+						<th class="text-center" style="width: 150px;">Nhi&#7879;t
+							&#273;&#7897;</th>
+						<th class="text-center" style="width: 150px;">&#272;&#7897;
+							&#7849;m</th>
+						<th class="text-center" style="width: 150px;">&#194;m thanh</th>
+						<th style="width: 200px;">Th&#7901;i gian &#273;o</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(key,value) in data">
+						<td ng-cloak>Ba H&#242;n - R&#7841;ch Gi&#225;</td>
+						<td class="text-center" ng-cloak>{{value.temperature}}</td>
+						<td class="text-center" ng-cloak>{{value.humidity}}</td>
+						<td class="text-center" ng-cloak>{{value.sound}}</td>
+						<td ng-cloak>{{dateTime}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+				<form class="form-inline">
+						<label for="usr">S&#7889; &#273;i&#7879;n tho&#7841;i</label> 
+						<input style="margin-left:26px; width: 338px;" type="text" class="form-control" id="usr">
+				</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">&#272;&#7891;ng
+						&#253;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
